@@ -97,16 +97,16 @@ The platform should acknowledge and save an application quickly. Document proces
 
 ## Engineering process to improve  team velocity
 
-***Weekly backlog refinement with clear  acceptance criteria***
+***Weekly backlog refinement with clear  acceptance criteria*** - 
 Review upcoming work before sprint planning and break large tasks into smaller tasks.
 
-***Risk based code reviews with automated quality checks***
+***Risk based code reviews with automated quality checks*** -
 Keep pull requests small and use automated linting, test and type checks
 
-***Frequent, low risk releases***
+***Frequent, low risk releases*** -
 Use feature flags, automated deployments, and staged rollouts. Release smaller changes more often, monitor key metrics, and maintain easy rollbacks
 
-***Sprint restrospectives***
+***Sprint restrospectives*** -
 After a sprint is done, analyze want went wrong, what went well and how the teams can improve.
 
 
