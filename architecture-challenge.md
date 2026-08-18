@@ -10,10 +10,9 @@ The current system is a monolith and everything is bundled creating performance 
 ## Proposed Approach
 Resource-intensive and high risk-risk workloads are moved out of the synchoronous path keeping the existing service as the main application application.
 
--,* AI risk scoring is set as an independent service
--,* Disbursements as a seperate service with indempotency implemented
--,* introduce queues to async workload processing
--,* 
+- **AI risk scoring is set as an independent service**
+- **Disbursements as a seperate service with indempotency implemented**
+- **introduce queues to async workload processing**
 
 
 ## Architecture Diagram 
