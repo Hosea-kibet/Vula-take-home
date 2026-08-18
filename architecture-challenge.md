@@ -24,34 +24,34 @@ The system is designed to:
 
 ## How an Application Moves Through the System
 
-**1.Application submission**
+**1.Application submission** -
 The SME creates an account, completes the funding form and uploads the required documents through the web or a mobile app.
 
-**2.Secure request handling**
+**2.Secure request handling** -
 The API Gateway authenticates the applicant, applies rate limits and routes the request to the funding platform.
 
-**3.Application registration**
+**3.Application registration** -
 The platform validates the basic information, stores the application and returns a reference number there an then.
 
-**4.Asynchronous processing**
+**4.Asynchronous processing** -
 The application is placed in a message queue. Background workers take applications from the queue without slowing down new submissions.
 
-**5.Verification and financial checks**
+**5.Verification and financial checks** -
 Document and KYC verification runs alongside credit and financial-data checks.
 
-**6.Risk assessment**
+**6.Risk assessment** -
 The AI risk service uses the verified information to produce a risk score, risk indicators and a recommendation. It does not make the final funding decision.
 
-**7.Human underwriting**
+**7.Human underwriting** -
 Underwriters review the application, supporting documents, verification results and risk recommendation through the review dashboard.
 
-**8.Funding decision**
+**8.Funding decision** -
 An authorized underwriter approves, rejects or requests additional information. Every action is recorded in the audit log.
 
-**9.Disbursement**
+**9.Disbursement** -
 Approved applications are sent to the disbursement service, which transfers funds through a bank or mobile-money provider.
 
-**10.Applicant notification**
+**10.Applicant notification** -
 The applicant receives an email, SMS or WhatsApp message confirming the outcome and next steps.
 
 ## Core Components
@@ -93,3 +93,21 @@ The applicant receives an email, SMS or WhatsApp message confirming the outcome 
 ## Important Design Rule
 
 The platform should acknowledge and save an application quickly. Document processing, KYC verification, credit checks, risk scoring and notifications should run asynchronously through the queue. This keeps application submission responsive even when thousands of SMEs apply at the same time.
+
+
+## Engineering process to improve  team velocity
+
+***Weekly backlog refinement with clear  acceptance criteria***
+Review upcoming work before sprint planning and break large tasks into smaller tasks.
+
+***Risk based code reviews with automated quality checks***
+Keep pull requests small and use automated linting, test and type checks
+
+***Frequent, low risk releases***
+Use feature flags, automated deployments, and staged rollouts. Release smaller changes more often, monitor key metrics, and maintain easy rollbacks
+
+***Sprint restrospectives***
+After a sprint is done, analyze want went wrong, what went well and how the teams can improve.
+
+
+
